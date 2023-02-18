@@ -51,11 +51,7 @@ a:active{
 /*! header/ navigation styles */
 
 header{
-    background-color: #08AEEA;
-background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +60,6 @@ background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 }
 header .header-container{
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -82,12 +77,20 @@ header .header-container{
     font-size: 1.8rem;
     font-weight: bolder;
     font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(255, 255, 0);
 }
 
 .header-container nav ul{
     padding: 0;
     margin: 0;
     list-style: none;
+}
+.header-container.nav-colored{
+    background: rgba(15, 15, 15, 0.89);
+    color: white;
+}
+.header-container.nav-transparent{
+    background: transparent;
 }
 nav ul li{
     display: inline-block;
@@ -101,20 +104,21 @@ nav ul li a{
     font-size: 24px;
     font-weight: bolder;
     text-transform: capitalize;
-    color: #000;
+    color: #fff;
 }
 nav ul li:hover{
-    background: rgb(194, 219, 253);
-    color:black;
+    background: rgba(31, 32, 32, 0.89);
+    color:#fff;
 }
 nav ul li.active{
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background: rgba(31, 32, 32, 0.89);
+    color:#fff;
 }
 
 
 /* dashboard styles/ home */
 section .home-container{
+    margin-top: 80px;
     height: 100vh;
     padding: 10px 25px;
     display: flex;
