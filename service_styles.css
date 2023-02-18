@@ -1,0 +1,39 @@
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 20px;
+}
+.services-container .service-card{
+    width: 80%;
+    padding: 16px;
+    line-height: 1.8;
+    letter-spacing: 1.2px;
+    text-align: center;
+    border-radius: 20px;
+   box-shadow: inset 4px 4px 1px rgba(22, 22, 88, 0.205);
+   background: #16141438;
+   box-sizing: border-box;
+   transition: .5s all ease-in-out;
+}
+
+.service-card h3{
+    text-transform: capitalize;
+    line-height: 3;
+}
+
+.service-card img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.service-card p{
+    font-weight: 300;
+    margin-top: 10px;
+    text-indent: 20px;
+}
+
+.service-card:hover {
+    transform: scale(1.2);
+}

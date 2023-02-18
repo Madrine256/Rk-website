@@ -1,2 +1,5 @@
-# Rk-website
-Just abasic website with htm and css
+# lowly-website
+
+basic website with only html and css
+
+## this is abasic website and not complete

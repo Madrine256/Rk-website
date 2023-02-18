@@ -1,0 +1,42 @@
+/* !contact Page styles */
+.contact-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-page .contact-form{
+    padding: 20px 0;
+    box-sizing: border-box;
+    width: 500px;
+    max-width: 800px;
+}
+.contact-page .contact-form > div{
+    padding: 10px;
+}
+.contact-page .contact-form .input-control label{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+    width: 100%;
+}
+.contact-page .contact-form .input-control input, textarea, button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    border: none;
+}
+textarea{
+    resize: none;
+}
+.contact-form button{
+    background-color: green;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+}

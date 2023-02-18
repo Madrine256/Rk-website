@@ -1,0 +1,56 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 0 10px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.footer-container .follow{
+    text-align: center;
+    padding: 4px;
+}
+.footer-container .follow a{
+    color: #000;
+    padding: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+    line-height: 1.5;
+    display: block;
+    text-transform: capitalize;
+    border-radius: 20px;
+}
+.footer-container .follow a:hover{
+    background-color: #000000bd;
+    color: #fff;
+}
+.footer-container .follow, .icons a:first-child{
+    letter-spacing: 2px;
+}
+.footer-container .icons a{
+    color: #000;
+}
+.footer-container .icons a:nth-child(2){ /*facebook*/
+    color: rgb(6, 6, 252);
+} 
+.footer-container .icons a:nth-child(3){  /*instagram*/
+    color: rgb(255, 0, 0);
+}
+    
+.footer-container .icons a:nth-child(4){  /*twitter*/
+    color: rgb(13, 188, 247);
+}
+.footer-container .icons a:last-child{  /*linkedin*/
+    color: rgb(41, 41, 196);
+}
+.footer-container .icons a i{
+    padding: 0 10px;
+    font-size: 24px;
+}
