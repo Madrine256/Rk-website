@@ -296,11 +296,12 @@ transition: .3s ease-in-out;
     z-index: 999;
     transform: translateX(-100%) scale(0);
     transition: transform .5s ease-in-out;
+    display: none;
      
  }
  .tab-container-active{
      transform: translateX(0) scale(1);
-     /* display: block; */
+     display: block;
  }
  .icon-container .close{
      width: 60px;
@@ -417,6 +418,9 @@ transition: .3s ease-in-out;
     .header-container .bars{
         display: block;
     }
+    /* .icon-container{
+        display: block;
+    } */
 
     
 }
