@@ -2,7 +2,8 @@
 .about-container{
     display: flex;
     padding: 20px;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
 }
@@ -14,14 +15,13 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 20px;
     transition: transform .3s ease-in-out;
 }
 .about-container .profile-pic img:hover{
     transform: scale(1.1);
 }
 .about-container .profile-summary{
-    width: 50%;
+    width: fit-content;
     padding: 10px;
     line-height: 1.5;
     box-sizing: border-box;
@@ -72,6 +72,7 @@
     padding:8px 0px;
     width: 150px;
     max-width: 240px;
+    min-width: 100px;
     box-shadow: inset -4px -4px 2px rgb(224, 221, 221), 2px 2px 2px black, inset 2px 2px 2px black;
     transition: box-shadow .3s ease-in-out;
 }
@@ -93,3 +94,6 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:900px) {
+    
+}

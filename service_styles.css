@@ -1,17 +1,16 @@
 .services-container{
     display: grid;
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
+    place-items: center;
 }
 .services-container .service-card{
     width: 80%;
-    padding: 16px;
     line-height: 1.8;
     letter-spacing: 1.2px;
     text-align: center;
     border-radius: 20px;
-   box-shadow: inset 4px 4px 1px rgba(22, 22, 88, 0.205);
-   background: #16141438;
+   box-shadow: 4px 4px 1px rgba(22, 22, 88, 0.205), -4px -4px 1px rgba(43, 43, 77, 0.63);
    box-sizing: border-box;
    transition: .5s all ease-in-out;
 }
@@ -19,12 +18,16 @@
 .service-card h3{
     text-transform: capitalize;
     line-height: 3;
+    text-decoration: underline;
 }
 
 .service-card img{
-    width: 100%;
+    width: calc(100% - 2px);
     height: 250px;
-    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+     object-position: center;
     transition: .3s ease-in-out;
 }
 
@@ -32,8 +35,12 @@
     font-weight: 300;
     margin-top: 10px;
     text-indent: 20px;
+    padding: .5rem 1.3rem;
 }
 
 .service-card:hover {
     transform: scale(1.2);
+}
+@media screen and (max-width:900px){
+
 }

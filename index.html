@@ -41,7 +41,6 @@
             </nav>
         </div>
     </header>
-    <!-- Main body of the page -->
     <div class="icon-container">
         <button class="close">
             <i class="fa-solid fa-close"></i>
@@ -74,16 +73,18 @@
             </button>
         </div>
     </div>
+    <!-- Main body of the page -->
+ 
     <main>
         <section id="home">
             <div class="home-container">
                 <div class="image-container">
-                    <img src="./images/suit_in_with_smile.jpg" alt="Lowlings Photo image">
+                    <img src="./images/suit_in_with_smile.png" alt="Lowlings Photo image">
                 </div>
                 <div class="profile_desc">
-                    <h2 class="title">Lowlings Rk</h2>
+                    <h2 class="title"><span>Lowlings Rk</span> </h2>
                     <h4>Social media influencer and mentor</a></h4>
-                    <a href="https://twitter.com/lowlings_RK"> <i class="fa-brands fa-twitter"></i> Follow me on Twitter</a>
+                        <button class="hire-me">Hire me</button>
                 </div>
             </div>
         </section>
@@ -96,28 +97,27 @@
             
             <div class="services-container">
                 <div class="service-card">
-                    <h3>Social media mentor</h3>
                     <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Social media manager and schedule planner">
+                    <h3>Social media mentor</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia quaerat consectetur, iste voluptates esse facere qui nulla consequuntur.</p>
-                    <a href="#footer">follow on social media</a>
                 </div>
                 <div class="service-card">
-                    <h3>cryptocurrency expert</h3>
                     <img src="https://images.pexels.com/photos/6780789/pexels-photo-6780789.jpeg?auto=compress&cs=tinysrgb&w=600" alt="cryptocurrency">
+                    <h3>cryptocurrency expert</h3>
                     <p> Sint, ducimus alias aperiam doloribus praesentium omnis earum vitae, et repellat tempora molestias ratione minima eum eligendi.</p>
-                    <a href="#">About cryptocurrency</a>
+             
                 </div>
                 <div class="service-card">
-                    <h3>Digital marketing and management</h3>
                     <img src="https://images.pexels.com/photos/6476808/pexels-photo-6476808.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+                    <h3>Digital marketing and management</h3>
                     <p>Exercitationem voluptas dolor optio ad soluta laboriosam tempora tempore recusandae?</p>
-                    <a href="#contact">Contact me</a>
+               
                 </div>
                 <div class="service-card">
-                    <h3>Our shop</h3>
                     <img src="https://images.pexels.com/photos/135620/pexels-photo-135620.jpeg?auto=compress&cs=tinysrgb&w=600" alt="shop website">
+                    <h3>Our shop</h3>
                     <p>Voluptatem repellat tempora quas autem reprehenderit nostrum! Quis illo dolore rem placeat laudantium voluptatum quod!</p>
-                    <a href="#shop">Shop here</a>
+                 
                 </div>
             </div>
         </div>         
@@ -129,7 +129,7 @@
             
             <div class="about-container">
                 <div class="profile-pic">
-                    <img src="./images/suit_in.jpg" alt="Lowlings profile picture">
+                    <img src="./images/suit_in.png" alt="Lowlings profile picture">
                 </div>
                 <div class="profile-summary">
                     <fieldset>
@@ -208,5 +208,16 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('.title', {
+            strings :["Lowlings ", "Lowlings RK"],
+            loop:true,
+            typedSpeed:200,
+            backSpeed : 180,
+            backdelay:1500,
+            showCursor:false,
+        })
+    </script>
 </body>
 </html>

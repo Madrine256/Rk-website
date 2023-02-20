@@ -9,40 +9,36 @@
 html{
     width:100%;
     height:100%;
+    font-size: 1rem;
 }
 /* variables */
 :root{
     --transition: all .3s ease-in-out;
+    --bgColor : rgba(2,2,17);
+    --box-shadow: 8px 10px 7px -1px rgba(45, 19, 104, 0.89), -8px -10px 7px -1px rgba(41, 24, 139, 0.801);
 }
 /* General styles */
 body{
     width: 100%;
     height: 100%;
-    background-color: #8EC5FC;
-    background-image: url("https://images.pexels.com/photos/379419/pexels-photo-379419.jpeg?auto=compress&cs=tinysrgb&w=600");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background: rgb(2, 2, 17);
     font-family: 'Oswald', sans-serif;
     position: relative;
+    font-size: 1rem;
 }
 
 section{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: auto;
     margin-top: 10px;
-    border-radius: 20px;
-    background: #3d3b3bcc;
-    color: #fff;
-    margin: 3rem;
+    color: white;
 }
 img{
-    width: 200px;
-    width: 500px;
-    height: 450px;
-    max-height: 450px;
-    max-width: 500px;
+    width: 300px;
+    height: 350px;
+    max-height: 400px;
+    max-width: 400px;
+   
 }
 h1, h2,h3,h4,h5,h6{
     text-transform: capitalize;
@@ -182,41 +178,41 @@ nav ul li.active{
 
 
 /* dashboard styles/ home */
-section .home-container{
-    margin-top: 80px;
+.home-container{
+    width: 100%;
     height: 100vh;
-    padding: 10px 25px;
+    max-height: 100%;
+    margin-top: 80px;
+    /* padding: 10px 25px; */
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    flex-direction: row-reverse;
     box-sizing: border-box;
+    /* gap: 10px; */
 }
 .home-container .image-container{ 
-    width: 50%;
+    width: fit-content;
     height: 70%;
-    text-align: center;
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-     -webkit-clip-path: polygon(25% 0%, 100% 0, 82% 100%, 0% 100%);
-clip-path: polygon(25% 0%, 100% 0, 82% 100%, 0% 100%);
-overflow: hidden;
-   
+    overflow: hidden;
 }
 
 .image-container img{
     width: 100%;
     height: 100%;
-    /* display: block; */
-    object-position: center center;
     object-fit: cover;
+    object-position: center;
+    filter: drop-shadow( 8px 8px 4px rgba(105, 104, 104, 0.849));
+    
 }
 .home-container .profile_desc{
-    width: 50%;
+    width: fit-content;
     text-align: center;
 
 } 
 .profile_desc h2{
+    display: block;
     font-family: 'Playfair Display', serif;
     font-size:6rem;
     font-weight: 900;
@@ -233,32 +229,17 @@ overflow: hidden;
     line-height: 3;
     text-transform: capitalize;
 }
-.profile_desc a{
-    text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    line-height: 2;
-    display: block;
-    background: #000;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-weight: bolder;
-    box-shadow: 2px 2px 1px wheat;
-    padding: 10px;
-    margin: 20px 0 0 0;
-    transition: .3s ease-in-out;
+.profile_desc .hire-me{
+    padding:10px 15px;
+    width: 200px;
+    background-color: var(--bgColor);
+    color: white;
+    box-shadow:5px 5px 4px -1px rgba(124,124,124,0.096), -5px -5px 4px -1px rgba(41, 24, 139, 0.801);
+    transition: var(--transition);
+  }
+.profile_desc .hire-me:hover{
+    box-shadow:var(--box-shadow);
 }
-.profile_desc a i{
-    transition: .3s ease-in-out;
-   padding: 4px;
-}
-.profile_desc a:hover , .profile_desc a:hover i{
-    background: #08AEEA;
-    transform: scale(1.1);
-}
-
 /*! services styles  */
 .row{
     overflow: hidden;
@@ -289,19 +270,20 @@ transition: .3s ease-in-out;
 .icon-container{
     background: rgba(15, 15, 15, 0.89);
     overflow:hidden;
-    width: 40%;
+    width: fit-content;
+    min-width: 150px;
     position: fixed;
     top: 20%;
-    left: 0;
+    left: 2px;
     z-index: 999;
-    transform: translateX(-100%) scale(0);
+    transform: translateX(-100%) scaleX(0);
     transition: transform .5s ease-in-out;
-    display: none;
+    /* display: none; */
      
  }
  .tab-container-active{
-     transform: translateX(0) scale(1);
-     display: block;
+     transform: translateX(0) scaleX(1);
+     /* display: block; */
  }
  .icon-container .close{
      width: 60px;
@@ -340,7 +322,6 @@ transition: .3s ease-in-out;
      min-width: 10px;
      border-radius: 10px;
      padding: 13px 23px;
-     /* background:yellow; */
      cursor: pointer;
      transition: var(--transition);
      position: relative;
@@ -348,6 +329,9 @@ transition: .3s ease-in-out;
      align-items: center;
      justify-content: center;
     
+ }
+ .icon-box .btns:hover  {
+    opacity: .5;
  }
  .icon-box .btns a{
      text-decoration: none;
@@ -418,9 +402,16 @@ transition: .3s ease-in-out;
     .header-container .bars{
         display: block;
     }
-    /* .icon-container{
-        display: block;
-    } */
-
+    .profile_desc h2{
+        font-size:4rem;
+        letter-spacing: 1.2px;
+    }
+    .profile_desc h4{
+        font-size: 1rem;
+    }
+    .profile_desc .hire-me{
+        padding:10px;
+        width: max-content;  
+      }
     
 }

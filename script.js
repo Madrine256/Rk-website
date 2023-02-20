@@ -63,3 +63,7 @@ btn_tabs.forEach((tab_item, tab_index , tabs_itself)=>{
    
 });
 
+var typed = new Typed('.title', {
+    strings :['Rusheesha'],
+})
+
