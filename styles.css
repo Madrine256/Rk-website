@@ -10,6 +10,10 @@ html{
     width:100%;
     height:100%;
 }
+/* variables */
+:root{
+    --transition: all .3s ease-in-out;
+}
 /* General styles */
 body{
     width: 100%;
@@ -21,6 +25,7 @@ body{
     background-position: center;
     background-size: cover;
     font-family: 'Oswald', sans-serif;
+    position: relative;
 }
 
 section{
@@ -57,6 +62,7 @@ header{
     left: 0;
     z-index: 1;
     margin-bottom: 80px;
+    transition: var(--transition);
 }
 header .header-container{
     width: 100%;
@@ -79,6 +85,65 @@ header .header-container{
     font-family: 'Montserrat Alternates', sans-serif;
     color: rgb(255, 255, 0);
 }
+.header-container .bars{
+    width: 100px;
+    height: 50px;
+    font-weight:bolder;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition:  all .3s ease-in-out;
+    display: none;
+}
+
+.header-container .bars .custom_bars{
+    background: #000;
+    width: 35px;
+    height: 3px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50% , -50%);
+    display: block;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+.bars .custom_bars::before , .bars .custom_bars::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #000;
+}
+.bars .custom_bars::before {
+    transform: translateY(-6px);
+}
+.bars .custom_bars::after {
+    transform: translateY(6px);
+}
+
+.bars.active:hover .custom_bars{
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+.bars.active:hover .custom_bars::before{ 
+    transform: rotate(45deg);
+    height: 5px;
+    transition: all .3s ease-in-out;
+}
+.bars.active:hover .custom_bars::after{ 
+    transform: rotate(135deg);
+    transition: all .3s ease-in-out;
+    height: 5px;
+}
+.header-container .bars:hover{
+       background: green;
+       color: #fff;
+}
 
 .header-container nav ul{
     padding: 0;
@@ -97,7 +162,7 @@ nav ul li{
     padding: 18px;
     width: 150px;
     text-align: center;
-    transition: .5s ease-in-out;
+    transition:all .5s ease-in-out;
 }
 nav ul li a{
     text-decoration: none;
@@ -111,7 +176,7 @@ nav ul li:hover{
     color:#fff;
 }
 nav ul li.active{
-    background: rgba(31, 32, 32, 0.89);
+    background: rgba(48, 116, 116, 0.89);
     color:#fff;
 }
 
@@ -215,4 +280,143 @@ transition: .3s ease-in-out;
     letter-spacing: 5px;
     text-decoration: none;
     font-size: 40px;
+}
+
+
+/* media querries for navbavra */
+
+/* !icons on max-width:900px */
+.icon-container{
+    background: rgba(15, 15, 15, 0.89);
+    overflow:hidden;
+    width: 40%;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    z-index: 999;
+    transform: translateX(-100%) scale(0);
+    transition: transform .5s ease-in-out;
+     
+ }
+ .tab-container-active{
+     transform: translateX(0) scale(1);
+     /* display: block; */
+ }
+ .icon-container .close{
+     width: 60px;
+     height: 60px;
+     border-radius: 30px;
+     background: rgb(255, 40, 40);
+     padding: 5px;
+     position: absolute;
+     top: 0;
+     right: 0;
+     cursor: pointer;
+     transform: scale(0.8);
+     transition: var(--transition);
+ }
+ .icon-container .close i{
+     color: #fff;
+     font-size: 28px;
+     font-weight: bolder;
+ }
+ .icon-container .close:hover{
+     background: red;
+     transform: scale(1);
+ }
+ 
+ .icon-box{
+     display: flex;
+     justify-content: start;
+     align-items: start;
+     flex-direction: column;
+     gap: 1rem;
+     padding: 2rem 1rem;
+     transition: var(--transition);
+ }
+ .icon-box .btns{
+     width: 20px;
+     min-width: 10px;
+     border-radius: 10px;
+     padding: 13px 23px;
+     /* background:yellow; */
+     cursor: pointer;
+     transition: var(--transition);
+     position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+    
+ }
+ .icon-box .btns a{
+     text-decoration: none;
+     display: block;
+     color: #000;
+     text-transform: capitalize;
+     
+ }
+ /* on nav item click class below  */
+ .active-nav-item{
+     width: 180px !important;
+     background: #fff;
+     max-width: 200px;
+     box-shadow:7px 7px 15px rgba(124,124,124,0.096);
+     transition: var(--transition);
+     display: flex !important;
+     align-items: start !important;
+     justify-content: start !important;
+ }
+ .active-nav-item .icon-name{
+     opacity: 1 !important;
+ }
+ .icon-box .btns a i{
+     font-size: 1.3rem;
+     vertical-align: middle;
+     -webkit-vertical-align:middle;
+ }
+ .icon-box .btns a .icon-name{
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 17px;
+     font-weight: 500;
+     transition: var(--transition);
+     opacity: 0;
+     position: absolute;
+     left: 60px;
+     top: 20px;
+ }
+ 
+ .home-icon , .home-item , .fa-house{
+     background-color: #ccd5ae;
+     color: #e9edc9;
+ }
+ .service-icon , .service-icon , .fa-briefcase{
+     background-color: #d4a373;
+     color: #ffb5a7;
+ }
+ .about-icon , .about-item ,  .fa-user{
+     background-color: #d6ccc2;
+     color: #ff758f;
+ }
+ .contact-icon , .contact-item, .fa-phone{
+     background-color: #ffb5a7;
+     color: #d4a373;
+ }
+ 
+ /* !end of icons on width 900px */
+
+@media screen and (max-width:900px){
+    header{
+        box-shadow: 2px 2px 2px wheat;
+    }
+    .header-container{
+        justify-content: space-evenly;
+    }
+    nav{
+      display: none;
+    }
+    .header-container .bars{
+        display: block;
+    }
+
+    
 }
